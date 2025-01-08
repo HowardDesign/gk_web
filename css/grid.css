@@ -1,0 +1,133 @@
+.at-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(auto, 300px));
+  gap: 1em;
+  justify-content: center;
+  padding: 0 1em;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.at-column {
+  color: var(--default);
+  z-index: 0;
+  position: relative;
+  background: var(--bg-dark-2);
+  border-radius: 10px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0.2s ease;
+}
+
+.at-column:hover {
+  z-index: 1;
+  box-shadow: 0 0 30px 0 var(--main, #3549FF);
+  transform: scale(1.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, z-index 0s 0s ease;
+}
+
+.at-user {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.at-user__avatar img {
+  width: 100%;
+  max-width: 46px;
+  filter: drop-shadow(0 5px 15px rgba(53, 73, 255, .4));
+}
+
+.at-user__name {
+  font-size: 1rem;
+}
+
+
+/*  */
+.at-column:hover img {
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+.number{
+  max-width: 1200px;
+  margin: 0 auto;
+  /* margin: -4em auto 0; */
+  row-gap: 3em;
+}
+.amount {
+  font-family: "Oxanium", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2em;
+  line-height: 1.2;
+}
+.amount img{
+  width: 100%;
+  max-width: 60px;
+  height: auto;
+}
+.amount:hover img {
+  /* animation-name: rotate; */
+  animation-duration: .7s;
+  animation-iteration-count: 1;
+}
+
+.amount p {
+  font-size: 4em;
+  font-weight: bolder;
+  padding: 0;
+  margin: 0;
+  background: -webkit-linear-gradient(var(--default), #939393);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+.amount:first-child p::after{
+  font-size: .5em;
+  content: "+";
+  vertical-align: text-top;
+}
+
+.amount small {
+  font-size: 1em;
+}
+
+
+@media (max-width: 767px) {
+  .brand{
+    padding: 5em 0 0;
+  }
+  .brand article{
+    padding: 0 .5em 1em;
+  }
+  .at-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 576px) {
+  .at-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .amount p{
+    font-size: 3em;
+  }
+}

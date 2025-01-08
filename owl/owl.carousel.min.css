@@ -1,0 +1,219 @@
+.owl-carousel .owl-wrapper:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0
+}
+
+.owl-carousel {
+    /* display: none; */
+    position: relative;
+    width: 100%;
+    -ms-touch-action: pan-y;
+    padding: 0 0 2em 0;
+}
+
+.owl-carousel .owl-wrapper {
+    /* display: none; */
+    position: relative;
+    -webkit-transform: translate3d(0, 0, 0)
+}
+
+.owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.owl-carousel .owl-wrapper-outer.autoHeight {
+    -webkit-transition: height 500ms ease-in-out;
+    -moz-transition: height 500ms ease-in-out;
+    -ms-transition: height 500ms ease-in-out;
+    -o-transition: height 500ms ease-in-out;
+    transition: height 500ms ease-in-out
+}
+
+.owl-carousel .owl-item {
+    /* float: left; */
+    padding: 3em .5em;
+}
+
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .2);
+}
+
+.owl-controls .owl-page.active {
+    background: var(--contrast-color-rgb);
+    opacity: .7;
+}
+
+.owl-controls {
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+}
+
+.owl-pagination {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1em;
+    padding: 0;
+}
+
+.grabbing {
+    cursor: url(grabbing.png) 8 8, move;
+}
+
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0)
+}
+
+/*  */
+.owl-item {
+    /* width: 240px; */
+}
+
+.post-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--default);
+    background: var(--bg-deep, #181928);
+    margin: 0 .5em;
+    padding: 1em 0;
+    border-radius: 25px;
+    row-gap: 2em;
+    transform-origin: center;
+    transform: scale(1) translateZ(0);
+    transition:
+        filter 200ms linear,
+        transform 200ms linear;
+    box-shadow: 0 0 15px 0 rgba(0, 15, 255, 0.7);
+
+    overflow: hidden;
+}
+
+.post-slide:hover{
+    box-shadow: 0 0 20px 0 var(--main, #3549FF);
+    transition: 0.3s;
+    transform: scale(1.05) translateZ(0);
+}
+.post-slide .btn-main {
+    position: absolute;
+    bottom: 0;
+    /* left: 0;
+    right: 0; */
+    padding: 0 25px;
+    max-width: 200px;
+    transform: translateY(100px);
+    /* transition: 0.3s; */
+}
+
+/* 暫停滑入動態 */
+.post-slide:hover .btn-main {
+    transform: none;
+    bottom: 15px;
+}
+.post-slide:hover .btn-main span{
+    /* transform: none; */
+    opacity: 0;
+}
+.post-slide:hover .btn-main::before {
+    transform: none;
+    opacity: 1;
+}
+
+
+
+.post-slide:hover .pic{
+    transform: translateY(-10px);
+    
+}
+.post-slide:hover .pic img{
+    scale: 1.2;
+}
+.post-slide:hover .type{
+    transform: translateY(-50px);
+}
+
+.pic {
+    max-width: 120px;
+}
+
+.pic img {
+    position: relative;
+    z-index: 1;
+}
+
+.pic::before {
+    position: absolute;
+    z-index: 0;
+
+    content: '';
+    width: 80px;
+    height: 80px;
+    transform: translate(-40px, 20px);
+    /* translate(-20px, -20px) */
+    background: var(--main, #3549FF);
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.50) inset;
+    filter: blur(5px);
+    border-radius: 50%;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+    row-gap: .5em;
+}
+
+.type span:first-child {
+    font-size: 1.5em;
+    font-family: var(--body-font);
+    color: var(--contrast-color);
+    position: relative;
+}
+.type span:first-child::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    transform: translateX(-15px);
+    bottom: -.2em;
+    width: 30px;
+    border: 1px solid var(--default);
+}
+.type span:last-child{
+    opacity: .3;
+}
+.post-slide:hover .type span:last-child{
+    opacity: 1;
+}
+/***************************** 滑入 模糊 blur */
+/* .owl-item:hover .post-slide {
+    transform: scale(1.05) translateZ(0);
+}
+.owl-wrapper:hover>.owl-item:not(:hover) .post-slide {
+    filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+} */
+
+
+

@@ -1,0 +1,218 @@
+.solution {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: 2rem;
+  margin-inline: auto;
+  width: min(100%, calc(100% - 1.5rem));
+  
+  --card-border-radius: 0.5rem;
+  --card-padding-block: 1.5rem;
+  --card-padding-inline: 1rem;
+  --outset-size: 0.75rem;
+  --number-font-size: 3rem;
+  --number-overlap: 1rem;
+
+  max-width: 1280px;
+}
+
+.solution>li {
+  color: var(--text-color);
+  background-color: var(--default);
+  box-shadow:
+    inset 1px 1px 0px rgb(255 255 255 / .5),
+    inset -1px -1px 0px rgb(0 0 0 / .25),
+    calc(var(--outset-size) * .25) calc(var(--outset-size) * .25) calc(var(--outset-size) * .5) rgb(0 0 0 / .25);
+  counter-increment: count;
+  display: flex;
+  flex-direction: column;
+  row-gap: .5em;
+
+  position: relative;
+  margin-top: calc(var(--number-font-size) - var(--number-overlap));
+  border-radius: var(--card-border-radius);
+  padding-block: var(--card-padding-block);
+  padding-inline: var(--card-padding-inline);
+}
+
+.solution>li::after {
+  content: counter(count, decimal-leading-zero);
+  position: absolute;
+  top: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--body-font-color);
+  font-size: var(--number-font-size);
+  line-height: 1;
+  z-index: -1;
+}
+
+.solution>li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: calc(var(--outset-size) * -1);
+  left: calc(var(--outset-size) * -1);
+  z-index: -1;
+
+  border-bottom-left-radius: calc(var(--card-border-radius) + var(--outset-size));
+  border-bottom-right-radius: calc(var(--card-border-radius) + var(--outset-size));
+  background-image: linear-gradient(to left, transparent calc(var(--outset-size) * 2), transparent 0), linear-gradient(135deg, rgba(249, 249, 249, .3) 80%, transparent 0);
+}
+
+.solution>li:hover:after {
+  color: #3549ff;
+  transition: all 0.3s ease-in-out;
+  top: -20%;
+}
+
+.solution>li:hover:before {
+  background-image: linear-gradient(to left, transparent calc(var(--outset-size) * 2), transparent 0), linear-gradient(135deg, rgb(53, 73, 255, 1) 80%, transparent 0);
+}
+
+.solution>li:hover .icon img {
+  transform-origin: center;
+  transform: scale(1.2);
+}
+
+/* card content */
+.icon {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: calc(var(--card-padding-block) * .5);
+}
+.icon img{
+  max-width: 50px;
+}
+
+.title {
+  font-size: 1.3em;
+  font-weight: 700;
+  text-align: center;
+  color: var(--bg-dark-2);
+}
+
+.descr {
+  font-size: 1rem;
+  text-align: center;
+  color: var(--body-font-color);
+}
+
+/* @media (max-width: 461px) {
+  .solution{
+    padding: 0 .5em;
+    row-gap: 0;
+    --number-overlap: 1.5rem;
+  }
+  .solution>li{
+    row-gap: 0;
+    padding-block: 10px;
+  }
+  .solution>li::after{
+    z-index: 1;
+    top: 10%;
+    left: 10%;
+    opacity: .5;
+  }
+  .solution>li:hover:after {
+    color: #3549ff;
+    transition: all 0.3s ease-in-out;
+    top: 10%;
+  }
+} */
+
+/**************************** 技術支援服務 */
+.column {
+  /* padding: 0 1em; */
+}
+
+.column:hover i {
+  right: -80px;
+  opacity: .05;
+}
+
+.column:hover .card {
+  background: var(--main);
+}
+
+.column:hover .card .txt h5,
+.column:hover .card .txt p {
+  opacity: 1;
+}
+.column .card .txt h5{
+  color: var(--contrast-color);
+}
+
+.column:hover a:after {
+  width: 10%;
+}
+
+.card {
+  margin: 0;
+  padding: 1.8rem 1.2rem;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 0 21px rgba(0, 0, 0, 0.27);
+  color: var(--default);
+  background: rgb(83, 83, 85, .5);
+  height: 165px;
+  overflow: hidden;
+}
+
+.card .txt {
+  z-index: 1;
+}
+
+.card .txt h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.card .txt p {
+  font-size: 1rem;
+  color: var(--default);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin: 0;
+  opacity: .5;
+}
+.card .ico-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden;
+  border-radius: 15px; */
+}
+
+.card i {
+  position: absolute;
+  top: 5%;
+  right: -40px;
+  z-index: 0;
+  transform: rotate(15deg);
+  opacity: .1;
+}
+.card i img{
+  width: 220px;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .column {
+    margin-bottom: 1rem;
+    padding: 0 1em;
+  }
+  .card{
+    height: auto;
+  }
+}
+
+

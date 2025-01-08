@@ -1,0 +1,63 @@
+.social-btns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  padding-bottom: 1em;
+}
+
+.social-btns .btn {
+  display: flex;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: 1;
+  border: 1px solid #3549FF;
+}
+
+
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.3s;
+  transition-timing-function: cubic-bezier(0.80, -0.10, 0.45, 1.5);
+}
+
+.social-btns .btn:before {
+  top: 100%;
+  left: 100%;
+}
+
+.social-btns .btn .fa {
+  transform: scale(.8);
+}
+
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+  background: var(--main);
+}
+
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: var(--default);
+  transform: scale(1);
+}
+
+
+.social-btns .btn:before {
+  content: '';
+  width: 130%;
+  height: 130%;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+.social-btns .btn .fa {
+  font-size: 30px;
+  color: var(--main);
+}

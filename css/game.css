@@ -1,0 +1,135 @@
+.lan{
+    /* padding: 0 0 3em; */
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
+}
+
+.lan2{
+    /* overflow: overlay; */
+    overflow-y: scroll;
+    height: 225px;
+}
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.color-box {
+    max-width: 60px;
+    min-height: 34px;
+    width: 100%;
+    height: 100%;
+    /* margin-bottom: 10px; */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* display: block; */
+}
+/* 當顯示圖片時，設置透明度為 1 (顯示) */
+.color-box.show {
+  display: block; /* 顯示圖片 */
+  opacity: 1;
+  animation: fadeIn 0.5s ease-in-out; /* 淡入動畫 */
+}
+
+/* 淡入動畫 */
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* 動畫開始時，透明度為 0 */
+  }
+  100% {
+    opacity: 1; /* 動畫結束時，透明度為 1 */
+  }
+}
+
+/* 當隱藏圖片時，設置透明度為 0 (隱藏) */
+.color-box.hide {
+  display: block;
+  opacity: 0;
+  animation: fadeOut 0.5s ease-in-out; /* 淡出動畫 */
+}
+
+/* 淡出動畫 */
+@keyframes fadeOut {
+  0% {
+    opacity: 1; /* 動畫開始時，透明度為 1 */
+  }
+  100% {
+    opacity: 0; /* 動畫結束時，透明度為 0 */
+  }
+}
+
+@media (min-width: 992px) {
+    .lan{
+        min-height: 240px;
+    }
+    .color-box {
+        width: calc(100% / 6 - 10px);
+    }
+}
+
+@media (max-width: 991px) {
+    .lan{
+        min-height: 220px;
+    }
+    .color-box {
+        width: calc(100% / 5 - 10px);
+    }
+}
+
+@media (max-width: 767px) {
+    .color-box {
+        width: calc(100% / 4 - 10px);
+    }
+}
+
+@media (max-width: 576px) {
+    .lan{
+        min-height: 240px;
+    }
+    .color-box {
+        width: 100%;
+    }
+}
+@media (max-width: 443px) {
+    .lan{
+        min-height: 295px;
+    }
+}
+@media (max-width: 379px) {
+    .lan{
+        min-height: 350px;
+    }
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: var(--default); /* 預設為灰色 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    opacity: .3;
+}
+
+.pagination span.active {
+    background-color: var(--main); /* 當前頁的圓點顯示為黑色 */
+    opacity: 1;
+}

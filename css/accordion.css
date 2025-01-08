@@ -1,0 +1,149 @@
+.accordion {
+    position: relative;
+    z-index: 1;
+    min-height: 390px;
+    /* min-height: 460px; */
+}
+
+.accordion .item {
+    border: none;
+    margin-bottom: .5em;
+
+    display: flex;
+    flex-direction: column;
+    /* row-gap: .2em; */
+}
+
+.qa-info {
+    color: var(--default);
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    background: rgba(15, 16, 32, 1);
+    /* background: rgba(255, 255, 255, .2); */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    /* border-top: 1px solid rgba(255, 255, 255, .1); */
+
+    position: relative;
+}
+.qa-info::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    background: var(--default);
+    opacity: .3;
+    
+}
+
+.accordion .item .item-header button.btn.btn-link {
+    color: var(--default);
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 10px 10px 0 0;
+    background: rgba(15, 16, 32, 1);
+    /* background: rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 3px 3px rgba(0, 0, 0, .7);
+    /* opacity: 1; */
+}
+
+.accordion .item .item-header button.btn.btn-link p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    width: 85%;
+    /* float: left; */
+    display: -webkit-inline-box;
+    margin: 0;
+    opacity: 1;
+}
+
+.accordion .item .item-header {
+    background: transparent;
+    padding: 0;
+    /* margin: 0 0 2px 0; */
+    overflow: hidden;
+    height: 72px;
+    /* border-radius: 10px; */
+
+    margin-bottom: -.1em;
+}
+
+.accordion .item .item-header button {
+    padding: 20px;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.accordion .item .item-header i {
+    float: right;
+    font-size: 30px;
+    color: var(--default);
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, var(--primary-color), var(--secondary-color));
+    transform: rotate(0deg);
+
+    /* opacity: .3; */
+}
+
+button.btn.btn-link.collapsed {
+    background: rgba(15, 16, 32, .9) !important;
+    opacity: .7;
+}
+
+button.btn.btn-link.collapsed p {
+    /* opacity: .5 !important; */
+}
+
+.accordion .item .item-header i::before {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: var(--default);
+    transition: all .3s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+}
+
+button.btn.btn-link.collapsed i::before,
+.accordion .item .item-header .collapsed i::before {
+    transform: rotate(-90deg);
+    opacity: 1;
+}
+
+.accordion .item .item-header .collapsed i::after{
+    opacity: 1;
+}
+
+.accordion .item .item-header i::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 2px;
+    background: var(--default);
+    transition: all .2s ease-in-out;
+
+    opacity: .3;
+}
+
+.accordion .item .item-header .collapsed i{
+    transform: rotate(-180deg);
+    
+    opacity: 1;
+}
+
+@media (max-width: 576px) {
+    .accordion .item .item-header button.btn.btn-link {
+        /* background: rgba(255, 255, 255, .15) !important; */
+    }
+}
