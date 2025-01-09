@@ -142,6 +142,7 @@
 
   .swiper-slide .container * {
     text-align: center;
+    transform: none !important;
   }
 
   .swiper-slide .container {
