@@ -14,6 +14,11 @@
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
 }
 
+.modal .modal-content{
+    transform: scale(.5);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
 .modal-content {
     padding: 5rem 2rem 2rem;
     width: 90%;
@@ -96,6 +101,11 @@
 .show-modal {
     opacity: 1;
     visibility: visible;
+    /* transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; */
+}
+
+.show-modal .modal-content{
     transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }

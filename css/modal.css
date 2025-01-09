@@ -5,15 +5,18 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    opacity: 0;
+    align-items: center;    
     visibility: hidden;
-    /* 
-    transform: scale(.7);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; 
-    */
+    /* transform: scale(.7);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s; */
+}
+
+.modal .modal-content{
+    transform: scale(.5);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
 .modal-content {
@@ -71,4 +74,9 @@
     visibility: visible;
     /* transform: scale(1);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s; */
+}
+
+.show-modal .modal-content{
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
