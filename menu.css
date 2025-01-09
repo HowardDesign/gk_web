@@ -156,14 +156,12 @@ header .desk-menu .menu-container .menu>li {
   -o-transition: all 0.33s ease;
   transition: all 0.33s ease;
   
-  /* float: left; */
   display: inline-block;
-
   margin: 0 .5em;
   cursor: pointer;
-  position: relative;
+  /* position: relative;
   overflow: inherit;
-  /* transform-origin: top center; */
+  transform-origin: top center; */
   animation: translateDown 200ms 0ms ease-in-out forwards;
 }
 
@@ -188,7 +186,7 @@ header .desk-menu .menu-container .menu>li.menu-item-has-children>a::after {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #fff;
+  background-color: var(--default);
   position: absolute;
   content: "";
   height: 2px;
@@ -419,7 +417,7 @@ header .hamburger-menu {
   header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu {
     left: 50%;
     margin-left: -60px;
-    top: 46px;
+    /* top: 46px; */
   }
 
   header .desk-menu .menu-container .menu>li.menu-item-has-children a {
@@ -622,7 +620,7 @@ header .hamburger-menu {
     -ms-transform: rotate(-45deg) !important;
     -o-transform: rotate(-45deg) !important;
     transform: rotate(-45deg) !important;
-    top: 20px !important;
+    top: 23px !important;
     right: inherit !important;
     left: 15px !important;
   }
@@ -633,7 +631,7 @@ header .hamburger-menu {
     -ms-transform: rotate(45deg) !important;
     -o-transform: rotate(45deg) !important;
     transform: rotate(45deg) !important;
-    top: 24px !important;
+    top: 27px !important;
     left: 15px !important;
   }
 
@@ -677,7 +675,7 @@ header .hamburger-menu {
 
   header .desk-menu .menu-container .menu>li.menu-item-has-children a:hover::before,
   header .desk-menu .menu-container .menu>li.menu-item-has-children a:hover::after{
-    background: var(--main);
+    background: var(--tag-color);
   }
 
   header .desk-menu .menu-container .menu>li.menu-item-has-children .sub-menu {
