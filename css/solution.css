@@ -5,11 +5,12 @@
 
 .box {
   position: relative;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: stretch;
+  align-items: stretch; */
   margin: 0 0 1em 0;
   /* transition: 0.5s; */
+  z-index: 9;
 }
 
 .box::before {
@@ -109,6 +110,7 @@
   backdrop-filter: blur(10px);
   border-radius: 15px;
   /* transform: 0.5s; */
+  cursor: pointer;
 }
 
 .box .content img {
