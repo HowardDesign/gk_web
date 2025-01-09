@@ -1,4 +1,4 @@
-const triggers = document.getElementsByClassName('trigger');
+const triggers = document.getElementsByClassName('box');  // trigger
 const triggerArray = Array.from(triggers).entries();
 const modals = document.getElementsByClassName('modal');
 const closeButtons = document.getElementsByClassName('b-close');
