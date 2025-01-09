@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="css/plugins.css">
   <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="menu.css">
-  <link rel="stylesheet" href="flat.css">
   <script src='js/jquery.min.js'></script>
   <!-- backend system -->
   <link rel="stylesheet" href="css/system.css">
@@ -30,11 +29,6 @@
         <div class="logo-adn"><a title="" href="index.html">Game <span>Kingdom</span></a></div>
       </div>
       <div class="menu-container">
-        <!-- 
-        <div class="menu-head">
-          <a href="https://www.davidsonsilva.com.br" class="e1"><img src="http://pic.youmobile.org/imgcloud/googlenewicon_app.png" alt="Davidson Silva"></a>
-        </div> 
-        -->
         <div class="menu-header-container">
           <ul id="cd-primary-nav" class="menu">
             <li class="menu-item menu-item-has-children">
@@ -67,26 +61,23 @@
           </ul>
         </div>
       </div>
+      <div class="dropdown">
+        <img src="images/flat/lan-hk.png" alt="" onclick="myFunction()" class="dropbtn">
+        <div id="myDropdown" class="dropdown-content">
+          <li><img src="images/flat/lan-ar.png" alt=""></li>
+          <li><img src="images/flat/lan-br.png" alt=""></li>
+          <li><img src="images/flat/lan-cn.png" alt=""></li>
+          <li><img src="images/flat/lan-ec.png" alt=""></li>
+          <li><img src="images/flat/lan-es.png" alt=""></li>
+          <li class="active"><img src="images/flat/lan-hk.png" alt=""></li>
+          <li><img src="images/flat/lan-hn.png" alt=""></li>
+          <li><img src="images/flat/lan-us.png" alt=""></li>
+        </div>
+      </div>
       <div class="hamburger-menu">
         <div class="bar"></div>
       </div>
-      <div class="sl-nav">
-        <ul>
-          <li><b><img src="images/flat/lan-hk.png" alt=""></b>
-            <div class="triangle"></div>
-            <ul>
-              <li><img src="images/flat/lan-ar.png" alt=""></li>
-              <li><img src="images/flat/lan-br.png" alt=""></li>
-              <li><img src="images/flat/lan-cn.png" alt=""></li>
-              <li><img src="images/flat/lan-ec.png" alt=""></li>
-              <li><img src="images/flat/lan-es.png" alt=""></li>
-              <li class="active"><img src="images/flat/lan-hk.png" alt=""></li>
-              <li><img src="images/flat/lan-hn.png" alt=""></li>
-              <li><img src="images/flat/lan-us.png" alt=""></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+      
     </div>
   </header>
 
@@ -162,7 +153,7 @@
     </article>
     <div class="layout-area row wow fadeInUp">
       <div class="col-sm-6 col-md-4 col-lg-4 ag-courses_item">
-        <span class="ag-courses-item_link trigger">
+        <span class="ag-courses-item_link box">
           <div class="ag-courses-item_txt">12</div>
           <div class="ag-courses-item_bg"></div>
           <div class="ag-courses-item"><img src="images/material/ico-pro01.png" alt=""></div>
@@ -171,7 +162,7 @@
       </div>
 
       <div class="col-sm-6 col-md-4 col-lg-4 ag-courses_item">
-        <span class="ag-courses-item_link trigger">
+        <span class="ag-courses-item_link box">
           <div class="ag-courses-item_txt">6</div>
           <div class="ag-courses-item_bg"></div>
           <div class="ag-courses-item"><img src="images/material/ico-pro02.png" alt=""></div>
@@ -180,7 +171,7 @@
       </div>
 
       <div class="col-sm-6 col-md-4 col-lg-4 ag-courses_item">
-        <span class="ag-courses-item_link trigger">
+        <span class="ag-courses-item_link box">
           <div class="ag-courses-item_txt">4</div>
           <div class="ag-courses-item_bg"></div>
           <div class="ag-courses-item"><img src="images/material/ico-pro03.png" alt=""></div>
@@ -189,7 +180,7 @@
       </div>
 
       <div class="col-sm-6 col-md-4 col-lg-4 ag-courses_item">
-        <span class="ag-courses-item_link trigger">
+        <span class="ag-courses-item_link box">
           <div class="ag-courses-item_txt">6</div>
           <div class="ag-courses-item_bg"></div>
           <div class="ag-courses-item"><img src="images/material/ico-pro04.png" alt=""></div>
@@ -198,7 +189,7 @@
       </div>
 
       <div class="col-sm-6 col-md-4 col-lg-4 ag-courses_item">
-        <span class="ag-courses-item_link trigger">
+        <span class="ag-courses-item_link box">
           <div class="ag-courses-item_txt">4</div>
           <div class="ag-courses-item_bg"></div>
           <div class="ag-courses-item"><img src="images/material/ico-pro05.png" alt=""></div>
@@ -207,7 +198,7 @@
       </div>
 
       <div class="col-sm-6 col-md-4 col-lg-4 ag-courses_item">
-        <span class="ag-courses-item_link trigger">
+        <span class="ag-courses-item_link box">
           <div class="ag-courses-item_txt">4</div>
           <div class="ag-courses-item_bg"></div>
           <div class="ag-courses-item"><img src="images/material/ico-pro06.png" alt=""></div>
@@ -481,6 +472,7 @@
 <script src="js/script.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/designesia.js"></script>
+<script src="js/myDropdown.js"></script>
 <!-- top slider -->
 <script src='js/swiper.min.js'></script>
 <script src="js/swiper.js"></script>

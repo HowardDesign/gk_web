@@ -114,7 +114,8 @@ header .desk-menu .logo-adn a {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   
-  background-image: url(./images/gk_logo-mobile.png);
+  /* background-image: url(./images/gk_logo-mobile.png); */
+  background-image: url(./images/gk_logo2.png);
   background-position: 0;
   background-repeat: no-repeat;
   background-size: contain;
@@ -471,7 +472,7 @@ header .hamburger-menu {
     order: 9;
     opacity: .5;
   }
-  header:hover .hamburger-menu{
+  header .hamburger-menu:hover{
     opacity: 1;
   }
   
