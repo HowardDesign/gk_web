@@ -70,11 +70,11 @@
 }
 
 .swiper-slide img {
-  -webkit-animation: testim-show .5s ease-in-out forwards;
+  /* -webkit-animation: testim-show .5s ease-in-out forwards;
   -moz-animation: testim-show .5s ease-in-out forwards;
   -ms-animation: testim-show .5s ease-in-out forwards;
   -o-animation: testim-show .5s ease-in-out forwards;
-  animation: testim-show .5s ease-in-out forwards;
+  animation: testim-show .5s ease-in-out forwards; */
 }
 
 @media (max-width: 991px) {
