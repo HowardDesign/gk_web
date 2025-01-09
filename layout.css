@@ -388,7 +388,7 @@ a.btn-main:hover,
 /* ****************************  game */
 #bgk-about {
     position: relative;
-    background-image: url(images/background/bgk.png);
+    background-image: url(images/background/bgk.jpg);
     background-size: cover;
     background-position: left;
     margin: -34px 0 0;
@@ -1380,7 +1380,7 @@ ul.provider-card li .star {
 /* *****************************************   contact  */
 #bgk-contact {
     position: relative;
-    background: url(images/background/bgk-contact.png) left -100px no-repeat;
+    background: url(images/background/bgk-contact.jpg) left -100px no-repeat;
     background-size: cover;
 
     min-height: 670px;
@@ -1905,7 +1905,7 @@ ul.provider-card li .star {
     /* margin: 0 auto; */
 }
 .bg_qa {
-    background: url(images/background/bg-qa.png) no-repeat top center;
+    background: url(images/background/bg-qa.jpg) no-repeat top center;
     background-size: cover;
     position: absolute;
     width: 100%;
