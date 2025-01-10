@@ -645,12 +645,12 @@ ul.provider-card li .star {
     background-image: url(images/background/bg-solution.jpg);
     background-size: cover;
     background-position: center;
-    margin: -34px 0 0;
+    /* margin: -34px 0 0; */
     /* filter: blur(7.5px); */
 }
 
 #bgk-solution>.container {
-    padding: 6em 1em 0;
+    padding: 3em 1em 0;
     max-width: 800px;
 
     display: flex;
@@ -693,7 +693,7 @@ ul.provider-card li .star {
     background-position: center;
     /* opacity: 0.6;
     filter: blur(7.5px); */
-    margin: -2em 0 0;
+    /* margin: -2em 0 0; */
     padding: 0;
 }
 
@@ -792,7 +792,7 @@ ul.provider-card li .star {
     position: relative;
     background: url(images/background/bg-service.jpg) center top no-repeat;
     background-size: cover;
-    margin: -2em 0 0;
+    /* margin: -2em 0 0; */
 }
 
 #bgk-service a.btn-main {
@@ -800,7 +800,7 @@ ul.provider-card li .star {
 }
 
 #bgk-service>.container {
-    padding: 7em 1em 0;
+    padding: 4em 1em 0;
     max-width: 700px;
 
     display: flex;
@@ -894,16 +894,17 @@ ul.provider-card li .star {
 
     /*  */
     #bgk-product {
-        padding: 0;
+        padding: 1em 0 0;
     }
 
     #bgk-product>.container {
         row-gap: 1.5em;
+        padding: 2em 0 0;
     }
 
     /*  */
     #bgk-solution {
-        margin: -4em 0 -1em;
+        margin: 0 0 -1em;
     }
 
     #bgk-solution>.container {
@@ -951,7 +952,7 @@ ul.provider-card li .star {
 
     #bgk-service>.container {
         row-gap: 1em;
-        padding: 5em 1em 0;
+        padding: 3em 1em 0;
     }
 
     .service {
@@ -1481,7 +1482,7 @@ ul.provider-card li .star {
 }
 
 #bgk-contact>.container {
-    padding: 5em 1em 0;
+    padding: 4em 1em 0;
     max-width: 1200px;
 }
 
