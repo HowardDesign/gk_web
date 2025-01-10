@@ -16,7 +16,7 @@
 
 .form .btn-main {
     height: 50px;
-    max-width: 140px;
+    /* max-width: 140px; */
 }
 
 .form .text h3 {
@@ -26,7 +26,12 @@
 }
 
 .form p {
+    font-size: .9em;
     opacity: .7;
+    margin: .5rem 0 0;
+}
+.form p a{
+    color: var(--contrast-color);
 }
 
 .form a.btn-main::after {
