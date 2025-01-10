@@ -50,7 +50,7 @@
 }
 
 .owl-controls .owl-page.active {
-    background: var(--contrast-color-rgb);
+    background: var(--main);
     opacity: .7;
 }
 
