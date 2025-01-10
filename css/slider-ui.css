@@ -4,7 +4,7 @@
 
 #slider {
   width: 100%;
-  height: 690px;
+  height: 630px;
   /* 633px */
   position: relative;
   perspective: 1000px;
@@ -16,8 +16,8 @@
 
 #slider label {
   margin: auto;
-  width: 320px;
-  height: 633px;
+  width: 290px;
+  height: 580px;
   position: absolute;
   left: 0;
   right: 0;
@@ -125,7 +125,7 @@
 
 @media (max-width: 991px) {
   #slider {
-    height: 630px;
+    height: 560px;
     transform: scale(.8);
     padding: 0;
     margin: -4em 0 -1em;
@@ -134,7 +134,7 @@
 
 @media (max-width: 767px) {
   #slider {
-    height: 630px;
+    height: 560px;
     transform: scale(.6);
     padding: 0;
     margin: -7em 0 -5em;
@@ -146,6 +146,9 @@
 }
 
 @media (max-width: 576px) {
+  #slider {
+    height: 550px;
+  }
 
   #s1:checked~#slide4,
   #s2:checked~#slide5,
