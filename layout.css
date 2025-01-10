@@ -110,7 +110,7 @@ footer {
     position: relative;
     width: 100%;
     height: auto;
-    padding: 6em 0 2em;
+    padding: 4em 0 2em;
     /* float: left;
     overflow: hidden; */
 }
@@ -148,7 +148,7 @@ small {
     overflow: hidden;
     z-index: 2;
 
-    padding: 5em .5em 0;
+    padding: 4em .5em 0;
 }
 
 .container-full {
@@ -215,6 +215,11 @@ footer>div:last-child {
 
     footer>div {
         font-size: .8em;
+    }
+}
+@media (max-width: 576px) {
+    article h2{
+        letter-spacing: -1px;
     }
 }
 
@@ -491,7 +496,7 @@ a.btn-main:hover,
     z-index: 3;
     overflow: hidden;
 
-    padding: .5em .5em 2em;
+    padding: 0 .5em 2em;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -688,8 +693,8 @@ ul.provider-card li .star {
     background-position: center;
     /* opacity: 0.6;
     filter: blur(7.5px); */
-    margin: -6em 0 0;
-    padding: 4em 0 0;
+    margin: -2em 0 0;
+    padding: 0;
 }
 
 #bgk-product>.container {
@@ -697,7 +702,7 @@ ul.provider-card li .star {
     flex-direction: column;
     align-items: center;
     row-gap: 2em;
-    padding: 5em 0 0;
+    padding: 3em 0 0;
 }
 
 #bgk-product article {
@@ -785,7 +790,7 @@ ul.provider-card li .star {
 /* ****************************  service */
 #bgk-service {
     position: relative;
-    background: url(images/background/bg-service.jpg) center bottom no-repeat;
+    background: url(images/background/bg-service.jpg) center top no-repeat;
     background-size: cover;
     margin: -2em 0 0;
 }
@@ -795,7 +800,7 @@ ul.provider-card li .star {
 }
 
 #bgk-service>.container {
-    padding: 9em 1em 0;
+    padding: 7em 1em 0;
     max-width: 700px;
 
     display: flex;
@@ -883,13 +888,13 @@ ul.provider-card li .star {
     }
 
     section {
-        padding: 3.5em 0 2em;
+        padding: 3em 0 2em;
         /* overflow: hidden; */
     }
 
     /*  */
     #bgk-product {
-        padding: 5em 0 0;
+        padding: 0;
     }
 
     #bgk-product>.container {
