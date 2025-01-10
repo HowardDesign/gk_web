@@ -501,7 +501,7 @@ a.btn-main:hover,
 }
 
 .game-partner {
-    padding: 3em 1em 2em;
+    padding: 2em 1em;
 }
 
 .game-partner article {
@@ -540,6 +540,9 @@ ul.provider-card li .star {
 
 /*  */
 @media (max-width: 576px) {
+    #bgk-about{
+        margin: 0;
+    }
     .provider-box {
         display: block;
         width: 100%;
@@ -628,7 +631,7 @@ ul.provider-card li .star {
     z-index: 3;
     max-width: 1440px;
     margin: 0 auto;
-    row-gap: 1.5em;
+    row-gap: 2em;
 }
 
 /* ****************************  solution */
@@ -694,6 +697,7 @@ ul.provider-card li .star {
     flex-direction: column;
     align-items: center;
     row-gap: 2em;
+    padding: 5em 0 0;
 }
 
 #bgk-product article {
@@ -1239,10 +1243,12 @@ ul.provider-card li .star {
         min-width: 200px;
     }
 
-    .big-img>div {}
+    .big-img>div {
+        /* width: 49%; */
+    }
 
     .big-img>div:nth-of-type(1) {
-        left: 0%;
+        left: -2%;
         top: 22%;
     }
 
@@ -1485,6 +1491,9 @@ ul.provider-card li .star {
 .info p {
     font-size: 1em;
     line-height: 2;
+}
+.info p span{
+    display: block;
 }
 
 .info a {
