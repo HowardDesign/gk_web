@@ -8,11 +8,6 @@
     min-height: 300px;
 }
 
-.lan2{
-    /* overflow: overlay; */
-    overflow-y: scroll;
-    height: 225px;
-}
 .image-container {
     display: flex;
     flex-wrap: wrap;
@@ -40,6 +35,132 @@
   animation: fadeIn 0.5s ease-in-out; /* 淡入動畫 */
 }
 
+.game-scroll {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    position: relative;
+    height: 280px;
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.game-scroll:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -5%;
+    width: 110%;
+    height: 90px;
+    /* background: linear-gradient(180deg, var(--bg-dark-1) 0%, rgba(255, 255, 255, 0.00) 100%); */
+}
+
+.game-scroll:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -5%;
+    width: 110%;
+    height: 90px;
+    /* background: linear-gradient(0deg, var(--bg-dark-1) 0%, rgba(248, 249, 250, 0.00) 100%); */
+}
+
+.game-scroll ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.game-scroll ul li {
+    text-align: center;
+    margin: 8px;
+}
+
+.game-scroll ul li img {
+    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.32);
+    width: 100%;
+    height: auto;
+}
+
+.game-scroll .marquee-wrapper:nth-child(odd) {
+    animation-direction: reverse;
+}
+
+.game-scroll .marquee-wrapper {
+    height: 50%;
+    animation: game 30s linear infinite;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/********************************************  */
+.currency-scroll{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+/* .currency-scroll:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 130%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.80) 0%, rgba(255, 255, 255, 0.00) 24.48%, rgba(255, 255, 255, 0.00) 77.21%, rgba(255, 255, 255, 0.80) 100%);
+    z-index: 1;
+} */
+.marquee-wrapper2 {
+    display: flex;
+    width: 200%;
+    animation: currency 14s linear infinite;
+}
+.marquee-wrapper2 ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.marquee-wrapper2 ul li {
+    margin: 0 6px;
+}
+.marquee-wrapper2 ul li img {
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px -1px rgba(152, 82, 0, .3);
+    min-width: 50px;
+}
+.currency-scroll .marquee-wrapper2:nth-child(odd) {
+    animation-direction: reverse;
+}
+
+
+@keyframes game {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+@keyframes currency{
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* 淡入動畫 */
 @keyframes fadeIn {
   0% {
@@ -49,14 +170,6 @@
     opacity: 1; /* 動畫結束時，透明度為 1 */
   }
 }
-
-/* 當隱藏圖片時，設置透明度為 0 (隱藏) */
-.color-box.hide {
-  display: block;
-  opacity: 0;
-  animation: fadeOut 0.5s ease-in-out; /* 淡出動畫 */
-}
-
 /* 淡出動畫 */
 @keyframes fadeOut {
   0% {
@@ -66,6 +179,14 @@
     opacity: 0; /* 動畫結束時，透明度為 0 */
   }
 }
+
+/* 當隱藏圖片時，設置透明度為 0 (隱藏) */
+.color-box.hide {
+    display: block;
+    opacity: 0;
+    animation: fadeOut 0.5s ease-in-out; /* 淡出動畫 */
+  }
+
 
 @media (min-width: 992px) {
     .lan{
@@ -89,6 +210,12 @@
     .color-box {
         width: calc(100% / 4 - 10px);
     }
+    .game-scroll {
+        width: 100%;
+    }
+    .currency-scroll {
+        gap: 1em;
+    }
 }
 
 @media (max-width: 576px) {
@@ -97,6 +224,11 @@
     }
     .color-box {
         width: 100%;
+    }
+
+    .game-scroll {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
     }
 }
 @media (max-width: 443px) {
@@ -133,3 +265,5 @@
     background-color: var(--main); /* 當前頁的圓點顯示為黑色 */
     opacity: 1;
 }
+
+
